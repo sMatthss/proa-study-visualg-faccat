@@ -6,7 +6,7 @@ algoritmo "horas_extras"
 // Data atual  : 10/09/2005
 var
 
-    hrstrab, slrhr, slrfinal: inteiro
+    hrstrab, slrhr, hrsextra, slrfinal: real
 
 inicio
 
@@ -16,7 +16,8 @@ inicio
     leia (slrhr)
 
     se (hrstrab > 160) entao
-        slrfinal <- (hrstrab - 160) * 0.50) * slrhr
+        hrsextra <- (hrstrab - 160) * (slrhr * 1.50)
+        slrfinal <- (160 * slrhr) + hrsextra
         escreval ("O salario do funcionario com horas extras foi: ", slrfinal)
     senao
         slrfinal <- hrstrab * slrhr

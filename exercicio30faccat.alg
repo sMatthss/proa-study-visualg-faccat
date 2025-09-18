@@ -1,4 +1,4 @@
-algoritmo "somamaiores"
+algoritmo "crescente"
 // Disciplina  : [Lógica de Programação]
 // Professor   : [Jailson Costa dos Santos]
 // Descrição   : Aqui você descreve o que o programa faz! (função)
@@ -17,15 +17,24 @@ inicio
    escreval("Digite o terceiro número: ")
    leia(c)
 
-   se (a > c) e (b > c) entao
-      escreval("A soma dos números é: ", a + b)
+   se (a > b) e (b > c) entao
+      escreval(a, b, c)
    senao
-      se (a > b) e (c > a) entao
-         escreval("A soma dos números é: ", a + c)
+      se (b > a) e (a > c) entao
+         escreval(b, a ,c)
       senao
-         escreval("A soma dos números é: ", b + c)
+         se (c > a) e (a > c) entao
+            escreval(c, a ,b)
+         senao
+            se (b > c) e (c > a) entao
+               escreval(b, c ,a)
+            senao
+               se (c > b) e (b > a) entao
+                  escreval(c, b, a)
+               fimse
+            fimse
+         fimse
       fimse
    fimse
-
 
 fimalgoritmo

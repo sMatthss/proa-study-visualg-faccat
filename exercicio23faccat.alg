@@ -1,4 +1,4 @@
-algoritmo "horas_extras"
+algoritmo "calculopeso"
 // Disciplina  : [Lógica de Programação]
 // Professor   : [Jailson Costa dos Santos]
 // Descrição   : Aqui você descreve o que o programa faz! (função)
@@ -6,12 +6,22 @@ algoritmo "horas_extras"
 // Data atual  : 10/09/2005
 var
 
-teste: caractere
+    sexo: caractere
+    peso_ideal, altura: real
 
 inicio
 
-teste <- "Este é um teste."
-escreval ("Variável Teste")
-escreva ("O valor da variável TESTE é: " + teste)
+    escreval ("Digite o sua altura: ")
+    leia (altura)
+    escreval ("Digite o seu sexo: ")
+    leia (sexo)
+
+    se (sexo = "M") entao
+        peso_ideal <- (72.7 * altura) - 58
+    senao
+        peso_ideal <- (62.1 * altura) - 44.7
+    fimse
+    escreval (peso_ideal)
+
 
 fimalgoritmo
